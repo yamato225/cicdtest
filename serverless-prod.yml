@@ -1,0 +1,15 @@
+name: prod-your-site-name
+
+prod-your-site-name:
+  component: '@sls-next/serverless-component@latest'
+  inputs:
+    bucketName: prod-your-site-name-s3
+    description: "Lambda@Edge for prod-your-site-name"
+    name:
+      defaultLambda: prod-your-site-name-lambda
+      apiLambda: prod-your-site-name-lambda
+    domain: ["prod-your-site-name", "bobhall.net"]
+    publicDirectoryCache: true
+    runtime:
+      defaultLambda: "nodejs14.x"
+      apiLambda: "nodejs14.x"
